@@ -3,8 +3,6 @@
 
 int	main(void)
 {
-	char	buf[5];
-	ft_strcpy(buf, "poi");
-	printf("%zu", ft_strlcat(buf, "lol", 5));
-	return(0);
+	printf("%s", ft_itoa(-124565326));
+	return (0);
 }
