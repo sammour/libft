@@ -6,7 +6,7 @@
 /*   By: sblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 01:50:53 by sblancha          #+#    #+#             */
-/*   Updated: 2015/12/03 02:32:12 by sblancha         ###   ########.fr       */
+/*   Updated: 2015/12/03 05:55:23 by sblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static size_t	begin(char *s)
 
 	i = 0;
 	while (ft_isspace(s[i]) != 0)
-			i++;
+		i++;
 	return (i);
 }
 
@@ -28,11 +28,11 @@ static size_t	last(char *s, size_t len)
 
 	i = 1;
 	while (ft_isspace(s[len - i]) != 0)
-			i++;
+		i++;
 	return (len - i);
 }
 
-char		*ft_strtrim(char const *s)
+char			*ft_strtrim(char const *s)
 {
 	char	*trimer;
 	size_t	i;
@@ -47,7 +47,7 @@ char		*ft_strtrim(char const *s)
 		return (NULL);
 	while (i + start <= stop)
 	{
-		trimer[i] = s [i + start];
+		trimer[i] = s[i + start];
 	}
 	trimer[i] = 0;
 	return (trimer);

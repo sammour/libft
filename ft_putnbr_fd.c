@@ -6,7 +6,7 @@
 /*   By: sblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 02:36:08 by sblancha          #+#    #+#             */
-/*   Updated: 2015/12/03 02:37:44 by sblancha         ###   ########.fr       */
+/*   Updated: 2015/12/03 05:50:08 by sblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	ft_putnbr_fd(int n, int fd)
 	d = NULL;
 	d = ft_itoa(n);
 	ft_putstr_fd(d, fd);
-	free (d);
+	free(d);
 }

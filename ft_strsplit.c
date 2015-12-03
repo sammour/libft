@@ -6,7 +6,7 @@
 /*   By: sblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 02:13:02 by sblancha          #+#    #+#             */
-/*   Updated: 2015/12/03 03:40:35 by sblancha         ###   ########.fr       */
+/*   Updated: 2015/12/03 05:54:04 by sblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,7 @@ static char		**newchain(int split, char c, char *s, char **tab)
 	{
 		while (s[i] != c && s[i])
 			i++;
-
-		while (s[i+1] && (s[i + 1] == s[i]))
+		while (s[i + 1] && (s[i + 1] == s[i]))
 			i++;
 		i++;
 		count++;
@@ -54,7 +53,6 @@ static char		**newchain(int split, char c, char *s, char **tab)
 	tab[count][len] = 0;
 	return (tab);
 }
-
 
 static int		splits(char *s, char c)
 {

@@ -6,12 +6,11 @@
 /*   By: sblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 00:26:24 by sblancha          #+#    #+#             */
-/*   Updated: 2015/12/03 03:31:39 by sblancha         ###   ########.fr       */
+/*   Updated: 2015/12/03 05:56:12 by sblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	hmc(int n)
 {
@@ -52,7 +51,7 @@ char			*ft_itoa(int n)
 	{
 		n = np;
 		array[h - i] = abso(n % 10) + '0';
-		np = np/10;
+		np = np / 10;
 		i++;
 	}
 	array[0] = '-';
