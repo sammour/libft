@@ -6,7 +6,7 @@
 /*   By: sblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 19:41:17 by sblancha          #+#    #+#             */
-/*   Updated: 2015/11/27 04:22:21 by sblancha         ###   ########.fr       */
+/*   Updated: 2015/12/03 02:18:30 by sblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strcat(char *s1, const char *s2)
 
 	i = ft_strlen(s1);
 	a = i;
-	b = ft_strlen((char*)s2) + a;
+	b = ft_strlen(s2) + a;
 	while (i < b)
 	{
 		s1[i] = s2[i - a];

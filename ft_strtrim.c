@@ -6,7 +6,7 @@
 /*   By: sblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 01:50:53 by sblancha          #+#    #+#             */
-/*   Updated: 2015/11/30 02:12:00 by sblancha         ###   ########.fr       */
+/*   Updated: 2015/12/03 02:32:12 by sblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ char		*ft_strtrim(char const *s)
 	trimer = NULL;
 	i = 0;
 	start = begin((char*)s);
-	stop = last((char*)s, ft_strlen((char*)s));
-	if (!(trimer = (char*)malloc(stop - start + 2)))
+	stop = last((char*)s, ft_strlen(s));
+	if (!(trimer = (char*)malloc(sizeof(char) * (stop - start + 2))))
 		return (NULL);
 	while (i + start <= stop)
 	{

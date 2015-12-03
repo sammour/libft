@@ -6,18 +6,21 @@
 /*   By: sblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 02:05:32 by sblancha          #+#    #+#             */
-/*   Updated: 2015/11/26 02:09:13 by sblancha         ###   ########.fr       */
+/*   Updated: 2015/12/03 02:22:29 by sblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	l;
 
 	l = 0;
-	while (str[l] != 0)
-		l++;
+	if (str)
+	{
+		while (str[l] != 0)
+			l++;
+	}
 	return (l);
 }

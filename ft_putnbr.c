@@ -1,41 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 19:34:44 by sblancha          #+#    #+#             */
-/*   Updated: 2015/12/03 02:16:43 by sblancha         ###   ########.fr       */
+/*   Created: 2015/12/03 00:26:24 by sblancha          #+#    #+#             */
+/*   Updated: 2015/12/03 03:02:56 by sblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+void	ft_putnbr(int n)
 {
-	size_t	i;
-	size_t	a;
-	size_t	b;
+	char	*d;
 
-	i = 0;
-	a = ft_strlen(dst);
-	b = ft_strlen(src);
-	if (a >= size)
-	{
-		return (size + b);
-	}
-	else if (a + b >= size)
-	{
-		i = a;
-		while (i < size)
-		{
-			dst[i] = src[i - a];
-			i++;
-		}
-		dst[size - 1] = 0;
-	}
-	else
-		dst = ft_strcat(dst, src);
-	return (a + b);
+	d = NULL;
+	d = ft_itoa(n);
+	ft_putstr(d);
+	free(d);
 }

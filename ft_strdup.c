@@ -6,7 +6,7 @@
 /*   By: sblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 23:52:14 by sblancha          #+#    #+#             */
-/*   Updated: 2015/11/27 04:22:41 by sblancha         ###   ########.fr       */
+/*   Updated: 2015/12/03 02:56:39 by sblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s1)
 
 	dst = NULL;
 	i = 0;
-	if (!(dst = (char*)malloc(sizeof(char) * ft_strlen((char*)s1) + 1)))
+	if (!(dst = (char*)malloc(sizeof(char) * ft_strlen(s1) + 1)))
 	{
 		errno = ENOMEM;
 		return (NULL);

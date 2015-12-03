@@ -6,7 +6,7 @@
 /*   By: sblancha <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 02:13:02 by sblancha          #+#    #+#             */
-/*   Updated: 2015/11/30 02:33:02 by sblancha         ###   ########.fr       */
+/*   Updated: 2015/12/03 03:40:35 by sblancha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ static int		splits(char *s, char c)
 
 	count = 0;
 	i = 0;
+	if (s[i] == 0)
+		return (0);
 	while (s[i] != 0)
 	{
 		if (s[i] != c && s[i + 1] == c)

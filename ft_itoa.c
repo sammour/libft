@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sblancha <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/12/03 00:26:24 by sblancha          #+#    #+#             */
+/*   Updated: 2015/12/03 03:31:39 by sblancha         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+#include <stdio.h>
 
 static size_t	hmc(int n)
 {
@@ -33,6 +46,8 @@ char			*ft_itoa(int n)
 	np = n;
 	if (!(array = (char*)malloc(sizeof(char) * (h + 1))))
 		return (NULL);
+	if (n == 0)
+		array[1] = '0';
 	while (np != 0)
 	{
 		n = np;
@@ -40,10 +55,9 @@ char			*ft_itoa(int n)
 		np = np/10;
 		i++;
 	}
-	if (n < 0)
-		array[h - i] = '-';
-	else
-		array[h - i] = '+';
+	array[0] = '-';
 	array[h] = '\0';
+	if (n >= 0)
+		array = ft_strsub(array, 1, h);
 	return (array);
 }
