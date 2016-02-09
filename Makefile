@@ -67,6 +67,8 @@ SRC = 	./ft_atoi.c\
 		./ft_memdel.c\
 		./ft_memalloc.c\
 		./ft_itoa.c\
+		./ft_lstdelone.c\
+		./ft_lstnew.c\
 
 OBJ = ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	  ft_isdigit.o ft_isprint.o ft_isspace.o ft_memccpy.o ft_memcpy.o \
@@ -79,7 +81,7 @@ OBJ = ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	  ft_striteri.o ft_striter.o ft_strequ.o ft_strdel.o ft_strclr.o \
 	  ft_putstr_fd.o ft_putstr.o ft_putnbr_fd.o ft_putnbr.o ft_putendl_fd.o \
 	  ft_putendl.o ft_putchar_fd.o ft_putchar.o ft_memdel.o ft_memalloc.o \
-	  ft_itoa.o
+	  ft_itoa.o ft_lstnew.o ft_lstdelone.o
 
 all: $(NAME)
 
