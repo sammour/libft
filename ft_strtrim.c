@@ -12,26 +12,6 @@
 
 #include "libft.h"
 
-static size_t	begin(char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (ft_isspace(s[i]) != 0)
-		i++;
-	return (i);
-}
-
-static size_t	last(char *s, size_t len)
-{
-	size_t	i;
-
-	i = 1;
-	while (ft_isspace(s[len - i]) != 0)
-		i++;
-	return (len - i);
-}
-
 char			*ft_strtrim(char const *s)
 {
 	char	*trimer;
@@ -41,14 +21,21 @@ char			*ft_strtrim(char const *s)
 
 	trimer = NULL;
 	i = 0;
-	start = begin((char*)s);
-	stop = last((char*)s, ft_strlen(s));
-	if (!(trimer = (char*)malloc(sizeof(char) * (stop - start + 2))))
-		return (NULL);
-	while (i + start <= stop)
+	start = 0;
+	stop = 0;
+	if (*s != 0)
 	{
-		trimer[i] = s[i + start];
+		while (s[start] == ' ' || s[start] == '\t' || s[start] == '\n')
+			start++;
+		if (s[start] == 0)
+			return (NULL);
+		stop = ft_strlen((char*)s) - 1;
+		while (s[stop] == ' ' || s[stop] == '\t' || s[stop] == '\n')
+			stop--;
+		if (!(trimer = (char*)malloc(sizeof(char) * (stop - start + 2))))
+			return (NULL);
+		ft_strncpy(trimer, (char*)&s[start], stop - start + 1);
+		trimer[stop + 1] = 0;
 	}
-	trimer[i] = 0;
 	return (trimer);
 }
